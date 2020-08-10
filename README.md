@@ -1,2 +1,2 @@
 # juegomemoria
-Juego de memoria en browser
+Browser Memory Game
