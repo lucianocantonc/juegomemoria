@@ -3,7 +3,6 @@ body{
     display: flex;
     justify-content: space-around;
 }
-
 .menu{
     display: flex;
     justify-content: center;
@@ -14,8 +13,14 @@ body{
 .menu-begin{
     padding: 20px;
     width: 250px;
+    height: 65px;
+    box-sizing: border-box;
     border-radius: 25px;
-    background-color: gainsboro;
+    background-color:rgb(220 220 220 / 35%);
+    color: white;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+
 }
 .game-container{
     display: flex;
