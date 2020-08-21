@@ -1,5 +1,4 @@
 
-
 const beginbtn = document.getElementById("beginbutton")
 const red = document.getElementById("redbutton")
 const blue = document.getElementById("bluebutton")
@@ -15,6 +14,7 @@ class Game{
   }
   begin(){
     alert('GOOOOO')
+    this.colorChoice = this.colorChoice.bind(this)
     this.level = 7
     this.colors = {
       red,
@@ -40,6 +40,7 @@ class Game{
   }
   nextLevel(){
     this.lightUpSequence()
+    this.userChoice()
   }
   lightUpSequence(){
     for (let i = 0; i < this.level; i++){
@@ -54,7 +55,17 @@ class Game{
   shutDownColor(color){
     this.colors[color].classList.remove('light')
   }
+  userChoice(){
+    this.colors.red.addEventListener('click', this.colorChoice)
+    this.colors.blue.addEventListener('click', this.colorChoice)
+    this.colors.yellow.addEventListener('click', this.colorChoice)
+    this.colors.green.addEventListener('click', this.colorChoice)
+  }
+  colorChoice(ev){
+    console.log(this)
+  }
 }
+
 
 function beginGame(){
   window.game = new Game()
