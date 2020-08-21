@@ -44,15 +44,27 @@ body{
     border-top-left-radius: 350px;
     background-color: red;
 }
+.button1.light{
+    background-color: #b35e5e;
+}
 .button2{
     border-top-right-radius: 350px;
     background-color: blue;
+}
+.button2.light{
+    background-color: #6666b9;
 }
 .button3{
     border-bottom-left-radius: 350px;
     background-color: yellow;
 }
+.button3.light{
+    background-color: #f3f38a;
+}
 .button4{
     border-bottom-right-radius: 350px;
     background-color: green;
+}
+.button4.light{
+    background-color: #7dcc7d;
 }
