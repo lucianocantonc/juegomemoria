@@ -4,7 +4,7 @@ const red = document.getElementById("redbutton")
 const blue = document.getElementById("bluebutton")
 const yellow = document.getElementById("yellowbutton")
 const green = document.getElementById("greenbutton")
-const LAST_LEVEL = 1
+const LAST_LEVEL = 10
 
 class Game{
   constructor(){
@@ -89,19 +89,19 @@ class Game{
       if (this.sublevel === this.level){
         this.level ++
         this.disableClick()
-      }
         if (this.level === (LAST_LEVEL + 1)){
           this.gameWinner()
         } else {
           setTimeout(this.nextLevel, 1500)
         }
+      }  
     } else {
       this.gameLoser()
     }
   }
   gameWinner(){
     swal('Simon says', 'You WIN!!', 'success')
-      .then(this.begin)
+      .then(() => this.begin)
   }
   gameLoser(){
     swal('Simon says', 'Keep practicing', 'error')
